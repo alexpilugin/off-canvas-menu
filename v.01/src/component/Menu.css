@@ -1,0 +1,49 @@
+.Menu {
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  height: 100vh;
+  margin-right: 10px;
+  width: 200px;  
+  overflow-x: hidden;
+
+  -webkit-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+  box-shadow: inset -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
+  opacity: 0.69;
+
+  background-color: darkslategray;
+  -webkit-transform: translate3d(-200px, 0, 0);
+  /* -webkit-transition: -webkit-transform 0.4s; */
+  -webkit-transition: all 0.4s;
+  transform: translate3d(-200px, 0, 0);
+  transition: all 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  /*transition: all 0.85s ease; */
+}
+
+.Menu.isOpen {
+  opacity: 1.0;
+  visibility: visible;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  transition: all 0.85s ease;
+}
+
+.Menu.isOpen .block {
+  -webkit-transform: none; /* Safari */
+  transform: none; /* Standard syntax */
+  transition: all 0.85s ease;
+}
+.Menu .block {
+  -webkit-transform: scale3d(0.9, 0.9, 0.9);
+  transform: scale3d(0.9, 0.9, 0.9);
+  transition: all 0.85s ease;
+  transform-origin: left 0;
+  -webkit-transform-origin: left 0; /* Chrome, Safari, Opera */
+  -ms-transform-origin: left 0; /* IE 9 */
+}
