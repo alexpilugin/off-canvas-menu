@@ -17,15 +17,17 @@ class App extends React.Component {
       <div className="App">
         <button className="btn"
           onClick={this.handleOnClick} >
-          {!this.state.menuIsOpen ? 'open' : 'close'}
+          {this.state.menuIsOpen ? 'open' : 'close'}
         </button>
 
-        <Aside isOpen={this.state.menuIsOpen} >
+        <Aside closed={this.state.menuIsOpen} >
           {/* some content inside menu */}
           <ul>
             <li>item 0 </li>
             <li>item 1 </li>
             <li>item 2 </li>
+            <li>item 3 </li>
+            <li>item 4 </li>
           </ul>
         </Aside>
 
